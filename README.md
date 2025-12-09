@@ -1,3 +1,5 @@
+[![smithery badge](https://smithery.ai/badge/@alxubuntu/america-hostinger-mcp)](https://smithery.ai/server/@alxubuntu/america-hostinger-mcp)
+
 # hostinger-api-mcp
 
 Model Context Protocol (MCP) server for Hostinger API.
