@@ -1,11 +1,19 @@
 # Smithery configuration file: https://smithery.ai/docs/config#smitheryyaml
+
 build:
   dockerBuildPath: ./
+
 startCommand:
-  type: stdio
+  type: http
   configSchema:
     type: object
     properties: {}
   commandFunction: |
-    (config) => ({ command: 'node', args: ['dist/index.js'] })
+    (config) => ({
+      command: 'node',
+      args: ['dist/index.js'],
+      env: {
+        PORT: config.port?.toString() || '8081'
+      }
+    })
   exampleConfig: {}
